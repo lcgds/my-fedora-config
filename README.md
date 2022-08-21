@@ -1,7 +1,7 @@
 # Fedora Initial Configuration
 ### Pacote de scripts com comandos de instalações e configurações para personalizar o Fedora Workstation
 
-![Screenshot #1](./screenshots/#1.png)
+<img src="./screenshots/1.png" width="100%">
 
 ## Como executar
 Abra o Terminal Linux e execute os seguintes comandos:
