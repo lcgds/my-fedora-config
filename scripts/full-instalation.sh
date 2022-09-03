@@ -173,10 +173,15 @@ echo -e "\n$a Instalando X Cursor Gen $r\n"
 echo -e "\n$a Instalando Ruby $r\n"
 	sudo dnf install ruby -y -b -q
 	
-echo -e "\n$a Instalando Ruby $r\n"
-	sudo dnf install ruby -y -b -q
+echo -e "\n$a Instalando Apache $r\n"
+	sudo dnf install httpd -y -b -q
+	sudo systemctl start httpd.service
+	sudo systemctl enable httpd.service
 	
-echo -e "\n$a Limpando cache$r\n"
+echo -e "\n$a Instalando 7z $r\n"
+	sudo dnf install p7zip-plugins
+	
+echo -e "\n$a Limpando terminal$r\n"
 	sudo dnf clean
 	
 #Fontes
@@ -187,6 +192,83 @@ echo -e "\n$a Instalando fontes do Windows $r\n"
 echo -e "\n$a Instalando fontes do Google $r\n"
 	sudo dnf install google-roboto-fonts.noarch -y -b -q
 	sudo dnf install google-noto-fonts-common.noarch -y -b -
+	
+echo -e "\n$a Instalando fontes da Apple $r\n"
+	#SF PRO
+	sudo wget https://devimages-cdn.apple.com/design/resources/download/SF-Pro.dmg
+	7z x SF-Pro.dmg
+	cd SFProFonts/
+	7z x 'SF Pro Fonts.pkg'
+	7z x Payload~
+	cd Library/
+	cd Fonts/
+	sudo mkdir -p /usr/local/share/fonts/sf-pro/
+	sudo chown -R root: /usr/local/share/fonts/sf-pro/
+	sudo cp *.ttf /usr/local/share/fonts/sf-pro/
+	sudo cp *.otf /usr/local/share/fonts/sf-pro/
+	sudo chmod 644 /usr/local/share/fonts/sf-pro/*
+	sudo restorecon -RF /usr/local/share/fonts/sf-pro/
+    sudo fc-cache -v
+	cd ../../../
+	sudo rm -r SFProFonts/
+	sudo rm SF-Pro.dmg
+
+	#SF Compact
+	sudo wget https://devimages-cdn.apple.com/design/resources/download/SF-Compact.dmg
+	7z x SF-Compact.dmg
+	cd SFCompactFonts/
+	7z x 'SF Compact Fonts.pkg'
+	7z x Payload~
+	cd Library/
+	cd Fonts/
+	sudo mkdir -p /usr/local/share/fonts/sf-compact/
+	sudo chown -R root: /usr/local/share/fonts/sf-compact/
+	sudo cp *.ttf /usr/local/share/fonts/sf-compact/
+	sudo cp *.otf /usr/local/share/fonts/sf-compact/
+	sudo chmod 644 /usr/local/share/fonts/sf-compact/*
+	sudo restorecon -RF /usr/local/share/fonts/sf-compact/
+    sudo fc-cache -v
+	cd ../../../
+	sudo rm -r SFCompactFonts/
+	sudo rm SF-Compact.dmg
+
+	#SF Mono
+	sudo wget https://devimages-cdn.apple.com/design/resources/download/SF-Mono.dmg
+	7z x SF-Mono.dmg
+	cd SFMonoFonts/
+	7z x 'SF Mono Fonts.pkg'
+	7z x Payload~
+	cd Library/
+	cd Fonts/
+	sudo mkdir -p /usr/local/share/fonts/sf-mono/
+	sudo chown -R root: /usr/local/share/fonts/sf-mono/
+	sudo cp *.ttf /usr/local/share/fonts/sf-mono/
+	sudo cp *.otf /usr/local/share/fonts/sf-mono/
+	sudo chmod 644 /usr/local/share/fonts/sf-mono/*
+	sudo restorecon -RF /usr/local/share/fonts/sf-mono/
+    sudo fc-cache -v
+	cd ../../../
+	sudo rm -r SFMonoFonts/
+	sudo rm SF-Mono.dmg
+	
+	#New York
+	sudo wget https://devimages-cdn.apple.com/design/resources/download/NY.dmg
+	7z x NY.dmg
+	cd NYFonts/
+	7z x 'NY Fonts.pkg'
+	7z x Payload~
+	cd Library/
+	cd Fonts/
+	sudo mkdir -p /usr/local/share/fonts/ny/
+	sudo chown -R root: /usr/local/share/fonts/ny/
+	sudo cp *.ttf /usr/local/share/fonts/ny/
+	sudo cp *.otf /usr/local/share/fonts/ny/
+	sudo chmod 644 /usr/local/share/fonts/ny/*
+	sudo restorecon -RF /usr/local/share/fonts/ny/
+    sudo fc-cache -v
+	cd ../../../
+	sudo rm -r NYFonts/
+	sudo rm NY.dmg
 
 #Tema
 

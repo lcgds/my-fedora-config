@@ -12,13 +12,17 @@ Abra o Terminal Linux e execute os seguintes comandos:
 
 - Para dar permissão de execução aos scripts:
 
-` cd ./my-fedora-config `
-` sudo chmod +x ./scripts `
+```
+cd ./my-fedora-config
+sudo chmod +x ./scripts
+```
 
 - Para executar o script completo:
 
-` cd scripts ./scripts `
-` ./full-instalation.sh `
+```
+cd scripts ./scripts
+./full-instalation.sh
+```
 
 ## Scripts separados
 Caso você prefira executar os scripts separadamente, basta executar um por vez. Entretanto, existe uma ordem recomendada:

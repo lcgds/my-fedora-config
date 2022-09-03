@@ -164,11 +164,16 @@ echo -e "\n$a Instalando X Cursor Gen $r\n"
 	
 echo -e "\n$a Instalando Ruby $r\n"
 	sudo dnf install ruby -y -b -q
+
+echo -e "\n$a Instalando Apache $r\n"
+	sudo dnf install httpd -y -b -q
+	sudo systemctl start httpd.service
+	sudo systemctl enable httpd.service
 	
-echo -e "\n$a Instalando Ruby $r\n"
-	sudo dnf install ruby -y -b -q
+echo -e "\n$a Instalando 7z $r\n"
+	sudo dnf install p7zip-plugins
 	
-echo -e "\n$a Limpando cache$r\n"
+echo -e "\n$a Limpando terminal$r\n"
 	sudo dnf clean
 	
 clear
