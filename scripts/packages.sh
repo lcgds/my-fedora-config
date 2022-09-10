@@ -31,9 +31,6 @@ echo -e "\n$a Instalando Google Chrome $r\n"
 	
 echo -e "\n$a Instalando VLC $r\n"
 	sudo dnf install vlc -y -b -q
-	
-echo -e "\n$a Instalando Spotify $r\n"
-	flatpak install flathub com.spotify.Client -y --noninteractive
 
 echo -e "\n$a Instalando GIMP $r\n"
 	sudo dnf install gimp -y -b -q
@@ -90,11 +87,11 @@ echo -e "\n$a Instalando Figma $r\n"
 	flatpak install flathub io.github.Figma_Linux.figma_linux -y --noninteractive
 	
 echo -e "\n$a Instalando MySql $r\n"
-	sudo dnf install community-mysql-server -y -b -q
-	sudo systemctl enable mysqld
-	sudo systemctl start mysqld
-	sudo mysql_secure_installation
-	
+	sudo dnf install mariadb-server -y -b -q
+	sudo systemctl enable mariadb
+	sudo systemctl start mariadb
+	sudo mariadb-secure-installation
+
 echo -e "\n$a Instalando Sequeler $r\n"
 	sudo dnf install sequeler -y -b -q
 	
@@ -171,7 +168,19 @@ echo -e "\n$a Instalando Apache $r\n"
 	sudo systemctl enable httpd.service
 	
 echo -e "\n$a Instalando 7z $r\n"
-	sudo dnf install p7zip-plugins
+	sudo dnf install p7zip-plugins -y -b -q
+
+echo -e "\n$a Instalando PHP $r\n"
+	sudo dnf install php-cli -y -b -q
+	sudo dnf install phpunit composer -y -b -q
+	sudo dnf install php-mysqli -y -b -q
+	sudo dnf install phpmyadmin -y -b -q
+
+echo -e "\n$a Instalando WordPress $r\n"
+	sudo dnf install wordpress -y -b -q
+
+echo -e "\n$a Instalando Vim $r\n"
+	sudo dnf install vim -y -b -q
 	
 echo -e "\n$a Limpando terminal$r\n"
 	sudo dnf clean

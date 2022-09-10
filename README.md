@@ -8,20 +8,20 @@ Abra o Terminal Linux e execute os seguintes comandos:
 
 - Para baixar o repositório na sua máquina:
 
-` git clone https://github.com/lcgds/my-fedora-config `
+`$ git clone https://github.com/lcgds/my-fedora-config`
 
 - Para dar permissão de execução aos scripts:
 
 ```
-cd ./my-fedora-config
-sudo chmod +x ./scripts
+$ cd ./my-fedora-config
+$ sudo chmod +x ./scripts
 ```
 
 - Para executar o script completo:
 
 ```
-cd scripts ./scripts
-./full-instalation.sh
+$ cd scripts ./scripts
+$ ./full-instalation.sh
 ```
 
 ## Scripts separados
