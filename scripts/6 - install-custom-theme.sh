@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#Cores para comandos
-a="\0033[01;37;42m" #Cor verde para alerta
-r="\033[0m" #Reset de cor para padrão
-
-echo -e $"\n$a Script de tema iniciado $r\n"
-
 echo -e "\n$a Instalando tema $r\n"
 	sudo git clone https://github.com/vinceliuice/WhiteSur-gtk-theme/
 	cd ./WhiteSur-gtk-theme
@@ -32,7 +26,8 @@ echo -e "\n$a Instalando ícones $r\n"
 	cd ..
 	sudo rm -r ./Reversal-icon-theme
 	
-echo -e "\n$a Instalando cursor $r\n"
-	firefox https://www.pling.com/p/1360254/
+echo -e "\n$a Instalando X Cursor Gen $r\n"
+	sudo dnf install xcursorgen -y -b -q
 
-clear
+echo -e "\n$a Instalar cursor manualmente $r\n"
+	firefox https://www.pling.com/p/1360254/

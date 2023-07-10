@@ -27,7 +27,9 @@ $ ./full-instalation.sh
 ## Scripts separados
 Caso você prefira executar os scripts separadamente, basta executar um por vez. Entretanto, existe uma ordem recomendada:
 
-1. Pacotes (packages.sh)
-2. Fontes (fonts.sh)
-3. Tema (theme.sh)
-4. Extensões (extensions.sh)
+1. Remoção de software embarcados (bloatware.sh)
+2. Programas gerais (general-packages.sh)
+3. Programas para desenvolvimento (dev-packages.sh)
+4. Fontes (fonts.sh)
+5. Tema (theme.sh)
+6. Extensões (extensions.sh)
