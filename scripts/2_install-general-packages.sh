@@ -10,20 +10,13 @@ echo -e "\n$a Autorizando instalação de pacotes Flatpak e snap $r\n"
 	sudo dnf install snapd -y -b -q
 	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-echo -e "\n$a Iniciando processo de atualização de pacotes $r\n"
-	sudo dnf upgrade -y -b -q
-	sudo dnf update -y -b -q
-	
-#
+#Instalação de programas em ordem alfabética
 
 echo -e "\n$a Instalando 7z $r\n"
 	sudo dnf install p7zip-plugins -y -b -q
 
 echo -e "\n$a Instalando AppEditor $r\n"
 	sudo dnf install appeditor -y -b -q
-
-echo -e "\n$a Instalando Boxes  $r\n"
-	sudo dnf install gnome-boxes -y -b -q
 
 echo -e "\n$a Instalando Discord $r\n"
 	flatpak install flathub com.discordapp.Discord -y --noninteractive
@@ -46,8 +39,6 @@ echo -e "\n$a Instalando Google Chrome $r\n"
 
 echo -e "\n$a Instalando Grub Customizer $r\n"
 	sudo dnf install grub-customizer -y -b -q
-
-#iLovePDF
 
 echo -e "\n$a Instalando LibreOffice $r\n"
 	sudo dnf install libreoffice -y -b -q
@@ -81,13 +72,15 @@ echo -e "\n$a Instalando Video Trimmer $r\n"
 
 echo -e "\n$a Instalando VLC $r\n"
 	sudo dnf install vlc -y -b -q
-
-#WhatsApp
 	
 echo -e "\n$a Instalando Zoom $r\n"
 	flatpak install flathub us.zoom.Zoom -y --noninteractive
 
-#
+#Atualização total de pacotes e dependências
 
-echo -e "\n$a Limpando cache$r\n"
-	sudo dnf clean
+echo -e "\n$a Atualizando programas $r\n"
+	sudo dnf autoremove -y -q
+	sudo dnf distro-sync -y -q
+	sudo dnf check-update -y -q
+	sudo dnf upgrade -y -q
+	sudo dnf clean -y -q

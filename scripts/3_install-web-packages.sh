@@ -41,11 +41,15 @@ echo -e "\n$a Instalando Vim $r\n"
 
 echo -e "\n$a Instalando Visual Studio Code $r\n"
 	sudo dnf install code -y -b -q
-
-#Extensões do Visual Studio Code
 	
 echo -e "\n$a Instalando WordPress $r\n"
 	sudo dnf install wordpress -y -b -q
 
-echo -e "\n$a Limpando cache$r\n"
-	sudo dnf clean
+#Atualização total de pacotes e dependências
+
+echo -e "\n$a Atualizando programas $r\n"
+	sudo dnf autoremove -y -q
+	sudo dnf distro-sync -y -q
+	sudo dnf check-update -y -q
+	sudo dnf upgrade -y -q
+	sudo dnf clean -y -q
