@@ -90,24 +90,12 @@
 		sudo rm NY.dmg
 
 	echo -e "\n$a Instalando fonte Fira Code $r\n"
-		sudo mkdir FiraCode
-		cd FiraCode
-		sudo wget https://github.com/tonsky/FiraCode/releases/download/6.2/Fira_Code_v6.2.zip
-		7z x Fira_Code_v6.2.zip
-		cd ttf/
-		sudo mkdir -p /usr/local/share/fonts/fira-code/
-		sudo chown -R root: /usr/local/share/fonts/fira-code/
-		sudo cp *.ttf /usr/local/share/fonts/fira-code/
-		sudo chmod 644 /usr/local/share/fonts/fira-code/*
-		sudo restorecon -RF /usr/local/share/fonts/fira-code/
-		sudo fc-cache -v
-		cd ../..
-		sudo rm -r FiraCode
+		sudo dnf install fira-code-fonts -y -b -q
 
 #Tema
 
 	echo -e "\n$a Instalando tema $r\n"
-		sudo git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
+		sudo git clone -q https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
 		cd ./WhiteSur-gtk-theme
 		sudo ./install.sh -t default -N mojave --round
 		sudo ./tweaks.sh -F #Connect WhiteSur theme to Flatpak
@@ -117,19 +105,20 @@
 		sudo rm -r ./WhiteSur-gtk-theme
 		
 	echo -e "\n$a Instalando papel de parede $r\n"
-		sudo git clone https://github.com/vinceliuice/WhiteSur-wallpapers
+		sudo git clone -q https://github.com/vinceliuice/WhiteSur-wallpapers
 		cd ./WhiteSur-wallpapers
 		sudo ./install-gnome-backgrounds.sh
 		cd ..
 		sudo rm -r ./WhiteSur-wallpapers
 		
 	echo -e "\n$a Instalando ícones $r\n"
-		sudo git clone https://github.com/yeyushengfan258/Reversal-icon-theme/
+		sudo git clone -q https://github.com/yeyushengfan258/Reversal-icon-theme/
 		cd ./Reversal-icon-theme
 		sudo ./install.sh
 		cd ..
 		sudo rm -r ./Reversal-icon-theme
 
 	echo -e "\n$a Instalando cursores $r\n"
-		sudo cp -r ./src/oreo_spark_dark_cursors/ /usr/share/icons/
-		sudo cp -r ./src/oreo_spark_lite_cursors/ /usr/share/icons/
+		#https://www.gnome-look.org/p/1360254
+		sudo cp -r ./src/oreo_black_cursors/ /usr/share/icons/
+		sudo cp -r ./src/oreo_white_cursors/ /usr/share/icons/
