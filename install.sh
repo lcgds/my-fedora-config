@@ -31,7 +31,7 @@ else
       source ./scripts/5_configure-custom-extensions.sh
       ;;
     *)
-      echo -e "Opção '$1' inválida.\n\nAs opções válidas são:\n\n'-g' para instalar apenas de pacotes gerais; ou\n'-d' para instalar pacotes de desenvolvimentos além dos gerais."
+      echo -e "Opção '$1' inválida.\n\nAs opções válidas são:\n\n'-g' para instalar apenas programas gerais; ou\n'-d' para instalar programas de desenvolvimentos, além dos programas gerais."
       ;;
   esac
 fi

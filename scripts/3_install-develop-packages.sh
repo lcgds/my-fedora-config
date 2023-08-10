@@ -33,6 +33,9 @@
 
 	echo -e "\n$a Instalando InkScape $r\n"
 		sudo dnf install inkscape -y -b -q
+	
+		echo -e "\n$a Instalando Marker $r\n"
+		sudo dnf install marker -y -b -q
 
 	echo -e "\n$a Instalando MySql $r\n"
 		sudo dnf install mariadb-server -y -b -q
