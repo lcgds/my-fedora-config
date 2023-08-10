@@ -97,20 +97,20 @@
 	echo -e "\n$a Instalando tema $r\n"
 		sudo git clone -q https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
 		cd ./WhiteSur-gtk-theme
-		sudo ./install.sh -t default -N mojave --round
-		sudo ./tweaks.sh -F #Connect WhiteSur theme to Flatpak
 		sudo ./tweaks.sh -f alt #Install and edit Firefox theme
 		sudo ./tweaks.sh -g --no-darken -b default #Install and customize Login theme 
 		cd ..
 		sudo rm -r ./WhiteSur-gtk-theme
-		
-	echo -e "\n$a Instalando papel de parede $r\n"
+
+#Papéis de parede
+	echo -e "\n$a Instalando papéis de parede $r\n"
 		sudo git clone -q https://github.com/vinceliuice/WhiteSur-wallpapers
 		cd ./WhiteSur-wallpapers
 		sudo ./install-gnome-backgrounds.sh
 		cd ..
 		sudo rm -r ./WhiteSur-wallpapers
-		
+	
+#Ícones
 	echo -e "\n$a Instalando ícones $r\n"
 		sudo git clone -q https://github.com/yeyushengfan258/Reversal-icon-theme/
 		cd ./Reversal-icon-theme
@@ -118,6 +118,7 @@
 		cd ..
 		sudo rm -r ./Reversal-icon-theme
 
+#Cursores
 	echo -e "\n$a Instalando cursores $r\n"
 		#https://www.gnome-look.org/p/1360254
 		sudo cp -r ./src/oreo_black_cursors/ /usr/share/icons/

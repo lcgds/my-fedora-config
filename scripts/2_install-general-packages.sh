@@ -42,9 +42,6 @@
 
 	echo -e "\n$a Instalando LibreOffice $r\n"
 		sudo dnf install libreoffice -y -b -q
-
-	echo -e "\n$a Instalando Photos $r\n"
-		sudo dnf install gnome-photos -y -b -q
 		
 	echo -e "\n$a Instalando Skype $r\n"
 		sudo flatpak install flathub com.skype.Client -y --noninteractive

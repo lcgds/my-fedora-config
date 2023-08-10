@@ -31,6 +31,9 @@
 		sudo dnf install git git-all -y -b -q
 		sudo flatpak install flathub io.github.shiftey.Desktop -y --noninteractive
 
+	echo -e "\n$a Instalando InkScape $r\n"
+		sudo dnf install inkscape -y -b -q
+
 	echo -e "\n$a Instalando MySql $r\n"
 		sudo dnf install mariadb-server -y -b -q
 		sudo systemctl enable mariadb
