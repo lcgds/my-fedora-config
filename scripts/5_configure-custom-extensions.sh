@@ -3,8 +3,9 @@
 echo -e "\n$a Instalando Extension Manager $r\n"
 	sudo flatpak install flathub com.mattjakeman.ExtensionManager -y --noninteractive 
 
-echo -e "\n$a Acessando Gnome Extensions para Desativar Validação de Versão $r\n"
-	firefox https://extensions.gnome.org/local/
+echo -e "\n$a Configurando Gnome Extensions $r\n"
+	sudo gsettings set org.gnome.shell disable-user-extensions "false"
+	sudo sudo gsettings set org.gnome.shell disable-user-extensions "false"
 	
 echo -e "\n$a Importando extensões já configuradas $r\n"
 	sudo tar -xf extensions.tar.xz -C ~/.local/share/gnome-shell/
