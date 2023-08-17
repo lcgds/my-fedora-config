@@ -13,6 +13,9 @@
 	echo -e "\n$a Instalando CMatrix $r\n"
 		sudo dnf install cmatrix -y -b -q #Color 238357
 
+	echo -e "\n$a Instalando dconf Editor $r\n"
+		sudo dnf install dconf-editor
+
 	echo -e "\n$a Instalando FileZilla $r\n"
 		sudo dnf install filezilla -y -b -q
 
@@ -59,7 +62,10 @@
 		sudo dnf install vim -y -b -q
 
 	#echo -e "\n$a Instalando Visual Studio Code $r\n"
-		#sudo dnf install code -y -b -q
+		sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+		sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+		sudo dnf check-update
+		sudo dnf install code -y -b -q
 		
 	echo -e "\n$a Instalando WordPress $r\n"
 		sudo dnf install wordpress -y -b -q
@@ -69,5 +75,4 @@
 	echo -e "\n$a Atualizando programas $r\n"
 		sudo dnf autoremove -y -q
 		sudo dnf distro-sync -y -q
-		sudo dnf check-update -y -q
 		sudo dnf upgrade -y -q

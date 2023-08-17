@@ -1,7 +1,7 @@
 ## Fedora Initial Configuration
 Scripts para personalizar o Fedora Workstation
 
-<img src="./screenshot.webp" width="100%">
+<img src="./screenshot.png" width="100%">
 
 ### Como instalar
 Abra o Terminal e execute os seguintes comandos:

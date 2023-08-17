@@ -92,15 +92,8 @@
 	echo -e "\n$a Instalando fonte Fira Code $r\n"
 		sudo dnf install fira-code-fonts -y -b -q
 
-#Tema
 
-	echo -e "\n$a Instalando tema $r\n"
-		sudo git clone -q https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
-		cd ./WhiteSur-gtk-theme
-		sudo ./tweaks.sh -f alt #Install and edit Firefox theme
-		sudo ./tweaks.sh -g --no-darken -b default #Install and customize Login theme 
-		cd ..
-		sudo rm -r ./WhiteSur-gtk-theme
+
 
 #Papéis de parede
 	echo -e "\n$a Instalando papéis de parede $r\n"
