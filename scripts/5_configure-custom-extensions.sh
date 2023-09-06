@@ -17,7 +17,6 @@ echo -e "\n$a Configurando extensões $r\n"
 	sudo gnome-extensions enable custom-hot-corners-extended@G-dH.github.com
 	sudo gnome-extensions enable clipboard-indicator@tudmotu.com
 	sudo gnome-extensions enable color-picker@tuberry
-	sudo gnome-extensions enable dash-to-dock@micxgx.gmail.com
 	sudo gnome-extensions enable date-menu-formatter@marcinjakubowski.github.com
 	sudo gnome-extensions enable emoji-selector@maestroschan.fr
 	sudo gnome-extensions enable just-perfection-desktop@just-perfection
