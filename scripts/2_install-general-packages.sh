@@ -30,9 +30,6 @@
 	echo -e "\n$a Instalando Frog $r\n"	
 		sudo flatpak install flathub com.github.tenderowl.frog -y --noninteractive
 
-	echo -e "\n$a Instalando Geary $r\n"
-		sudo dnf install geary -y -b -q
-
 	echo -e "\n$a Instalando Google Chrome $r\n"
 		sudo dnf config-manager --set-enabled google-chrome
 		sudo dnf install google-chrome-stable -y -b -q

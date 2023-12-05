@@ -2,16 +2,10 @@
 
 #Instalação de programas em ordem alfabética
 
-	echo -e "\n$a Instalando Android Studio $r\n"
-		sudo flatpak install flathub com.google.AndroidStudio -y --noninteractive
-
 	echo -e "\n$a Instalando Apache $r\n"
 		sudo dnf install httpd -y -b -q
 		sudo systemctl start httpd.service
 		sudo systemctl enable httpd.servicer
-
-	echo -e "\n$a Instalando CMatrix $r\n"
-		sudo dnf install cmatrix -y -b -q #Color 238357
 
 	echo -e "\n$a Instalando dconf Editor $r\n"
 		sudo dnf install dconf-editor
