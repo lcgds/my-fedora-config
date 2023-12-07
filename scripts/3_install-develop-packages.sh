@@ -17,22 +17,11 @@
 		sudo dnf install firewall-config -y -b -q
 
 	echo -e "\n$a Instalando GIMP $r\n"
-		sudo flatpak install flathub org.gimp.GIMP -y --noninteractive
-		flatpak run org.gimp.GIMP
-		sudo git clone -q https://github.com/Diolinux/PhotoGIMP
-		sudo cp -R ./PhotoGIMP/.var/app/org.gimp.GIMP/config/GIMP/2.10/ $HOME/.config/GIMP/
-		sudo cp -R ./PhotoGIMP/.local/share/ $HOME/.local/
-		sudo rm -R ./PhotoGIMP/
+			sudo dnf install gimp -y -b -q
 
 	echo -e "\n$a Instalando Git $r\n"
 		sudo dnf install git git-all -y -b -q
 		sudo flatpak install flathub io.github.shiftey.Desktop -y --noninteractive
-
-	echo -e "\n$a Instalando InkScape $r\n"
-		sudo dnf install inkscape -y -b -q
-	
-		echo -e "\n$a Instalando Marker $r\n"
-		sudo dnf install marker -y -b -q
 
 	echo -e "\n$a Instalando MySql $r\n"
 		sudo dnf install mariadb-server -y -b -q

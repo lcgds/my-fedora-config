@@ -37,11 +37,8 @@
 	echo -e "\n$a Instalando Grub Customizer $r\n"
 		sudo dnf install grub-customizer -y -b -q
 
-	echo -e "\n$a Instalando LibreOffice $r\n"
-		sudo dnf install libreoffice -y -b -q
-		
-	echo -e "\n$a Instalando Skype $r\n"
-		sudo flatpak install flathub com.skype.Client -y --noninteractive
+	echo -e "\n$a Instalando ONLYOFFICE $r\n"
+		sudo flatpak install flathub org.onlyoffice.desktopeditors -y --noninteractive
 
 	echo -e "\n$a Instalando Solanum $r\n"
 		sudo flatpak install flathub org.gnome.Solanum -y --noninteractive
@@ -66,9 +63,6 @@
 
 	echo -e "\n$a Instalando VLC $r\n"
 		sudo dnf install vlc -y -b -q
-		
-	echo -e "\n$a Instalando Zoom $r\n"
-		sudo flatpak install flathub us.zoom.Zoom -y --noninteractive
 
 #Atualização total de pacotes e dependências
 

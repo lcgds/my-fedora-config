@@ -92,9 +92,6 @@
 	echo -e "\n$a Instalando fonte Fira Code $r\n"
 		sudo dnf install fira-code-fonts -y -b -q
 
-
-
-
 #Papéis de parede
 	echo -e "\n$a Instalando papéis de parede $r\n"
 		sudo git clone -q https://github.com/vinceliuice/WhiteSur-wallpapers
