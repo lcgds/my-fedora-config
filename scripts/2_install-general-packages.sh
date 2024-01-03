@@ -40,6 +40,9 @@
 	echo -e "\n$a Instalando ONLYOFFICE $r\n"
 		sudo flatpak install flathub org.onlyoffice.desktopeditors -y --noninteractive
 
+	echo -e "\n$a Instalando SaveDesktop $r\n"	
+		sudo flatpak install flathub io.github.vikdevelop.SaveDesktop -y --noninteractive
+
 	echo -e "\n$a Instalando Solanum $r\n"
 		sudo flatpak install flathub org.gnome.Solanum -y --noninteractive
 

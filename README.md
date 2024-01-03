@@ -1,12 +1,14 @@
 ## Fedora Initial Configuration
+
 Scripts para personalizar o Fedora Workstation
 
 <img src="./screenshot.png" width="100%">
 
 ### Como instalar
+
 Abra o Terminal e execute os seguintes comandos:
 
-1. Para baixar o repositório na sua máquina:
+1. Para baixar o repositório:
 
 ```bash
 git clone https://github.com/lcgds/my-fedora-config
@@ -25,5 +27,6 @@ cd ./my-fedora-config/
 ./install.sh (parâmetros opcionais*)
 ```
 
-#### * Parâmetros opcionais
-```-g``` para instalar apenas programas gerais; ou ```-d``` para instalar programas de desenvolvimentos, além dos programas gerais.
+#### \* Parâmetros opcionais
+
+`-g` para instalar apenas programas gerais; ou `-d` para instalar programas de desenvolvimentos, além dos programas gerais.

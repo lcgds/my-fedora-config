@@ -21,7 +21,8 @@
 
 	echo -e "\n$a Instalando Git $r\n"
 		sudo dnf install git git-all -y -b -q
-		sudo flatpak install flathub io.github.shiftey.Desktop -y --noninteractive
+		#git config --global user.name "Luiz"
+		#git config --global user.email "lcgds@live.com"
 
 	echo -e "\n$a Instalando MySql $r\n"
 		sudo dnf install mariadb-server -y -b -q
