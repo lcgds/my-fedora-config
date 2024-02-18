@@ -18,9 +18,6 @@
 	echo -e "\n$a Instalando AppEditor $r\n"
 		sudo dnf install appeditor -y -b -q
 
-	echo -e "\n$a Instalando Discord $r\n"
-		sudo flatpak install flathub com.discordapp.Discord -y --noninteractive
-
 	echo -e "\n$a Instalando Document Viewer $r\n"
 		sudo dnf install evince -y -b -q
 		
