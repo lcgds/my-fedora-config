@@ -3,13 +3,13 @@
 #Fontes
 
 	echo -e "\n$a Instalando fontes do Windows $r\n"
-		sudo dnf install https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm -y -b -q
+		sudo dnf install https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm -ybq
 
 	echo -e "\n$a Instalando fontes do Google $r\n"
 		sudo dnf search fonts
 		sudo dnf search fonts | grep google
-		sudo dnf install google-roboto-fonts.noarch -y -b -q
-		sudo dnf install google-noto-fonts-common.noarch -y -b -q
+		sudo dnf install google-roboto-fonts.noarch -ybq
+		sudo dnf install google-noto-fonts-common.noarch -ybq
 
 	echo -e "\n$a Instalando fontes da Apple $r\n"
 
@@ -29,8 +29,8 @@
 		sudo restorecon -RF /usr/local/share/fonts/sf-pro/
 			sudo fc-cache -v
 		cd ../../../
-		sudo rm -r SFProFonts/
-		sudo rm SF-Pro.dmg
+		rm -rf SFProFonts/
+		rm -f SF-Pro.dmg
 
 		#SF Compact
 		sudo wget https://devimages-cdn.apple.com/design/resources/download/SF-Compact.dmg
@@ -48,8 +48,8 @@
 		sudo restorecon -RF /usr/local/share/fonts/sf-compact/
 		sudo fc-cache -v
 		cd ../../../
-		sudo rm -r SFCompactFonts/
-		sudo rm SF-Compact.dmg
+		rm -rf SFCompactFonts/
+		rm -f SF-Compact.dmg
 
 		#SF Mono
 		sudo wget https://devimages-cdn.apple.com/design/resources/download/SF-Mono.dmg
@@ -67,8 +67,8 @@
 		sudo restorecon -RF /usr/local/share/fonts/sf-mono/
 		sudo fc-cache -v
 		cd ../../../
-		sudo rm -r SFMonoFonts/
-		sudo rm SF-Mono.dmg
+		rm -rf SFMonoFonts/
+		rm -f SF-Mono.dmg
 	
 		#New York
 		sudo wget https://devimages-cdn.apple.com/design/resources/download/NY.dmg
@@ -86,19 +86,26 @@
 		sudo restorecon -RF /usr/local/share/fonts/ny/
 		sudo fc-cache -v
 		cd ../../../
-		sudo rm -r NYFonts/
-		sudo rm NY.dmg
+		rm -rf NYFonts/
+		rm -f NY.dmg
 
 	echo -e "\n$a Instalando fonte Fira Code $r\n"
-		sudo dnf install fira-code-fonts -y -b -q
+		sudo dnf install fira-code-fonts -ybq
 
 #Papéis de parede
 	echo -e "\n$a Instalando papéis de parede $r\n"
-		sudo git clone -q https://github.com/vinceliuice/WhiteSur-wallpapers
-		cd ./WhiteSur-wallpapers
-		sudo ./install-gnome-backgrounds.sh
-		cd ..
-		sudo rm -r ./WhiteSur-wallpapers
+		git clone -q https://github.com/vinceliuice/WhiteSur-wallpapers
+		sudo bash WhiteSur-wallpapers/install-gnome-backgrounds.sh -t whitesur
+		rm -rf WhiteSur-wallpapers/
+
+		git clone -q https://github.com/foxt/macOS-Wallpapers
+		sudo cp macOS-Wallpapers/*.jpg ~/.local/share/backgrounds/
+		rm -rf macOS-Wallpapers/
+
+		git clone -q https://github.com/lcgds/mojave-on-linux.git
+		sudo cp -r mojave-on-linux/Mojave/ /usr/share/backgrounds/ && sudo cp mojave-on-linux/Mojave.xml /usr/share/gnome-background-properties/
+		rm -rf mojave-on-linux
+
 	
 #Ícones
 	echo -e "\n$a Instalando ícones $r\n"

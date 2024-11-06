@@ -2,7 +2,7 @@
 
 Scripts para personalizar o Fedora Workstation
 
-<img src="./screenshot.png" width="100%">
+<img src="./screenshot.webp" width="100%">
 
 ### Como instalar
 
@@ -29,4 +29,5 @@ cd ./my-fedora-config/
 
 #### \* Parâmetros opcionais
 
-`-g` para instalar apenas programas gerais; ou `-d` para instalar programas de desenvolvimentos, além dos programas gerais.
+- `-g` para instalar apenas programas gerais; ou
+- `-d` para instalar programas de desenvolvimentos, além dos programas gerais.

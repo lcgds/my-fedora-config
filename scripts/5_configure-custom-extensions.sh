@@ -8,8 +8,7 @@ echo -e "\n$a Configurando Gnome Extensions $r\n"
 	sudo gsettings set org.gnome.shell disable-extension-version-validation "true"
 	
 echo -e "\n$a Importando extensões $r\n"
-	#cd ~/.local/share/gnome-shell/
-	#sudo tar -cjf extensions.tar.bz2 extensions
+	# Para atualizar as extensões, execute: my_fedora_config_folder=$(pwd) && cd ~/.local/share/gnome-shell && sudo tar -cjf extensions.tar.bz2 extensions && mv --force ~/.local/share/gnome-shell/extensions.tar.bz2 $my_fedora_config_folder
 	sudo tar -xjf extensions.tar.bz2 -C ~/.local/share/gnome-shell/
 
 echo -e "\n$a Configurando extensões $r\n"
